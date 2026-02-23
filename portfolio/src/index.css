@@ -34,7 +34,7 @@
 @media print {
   @page {
     size: A4;
-    margin: 15mm;
+    margin: 12mm 15mm;
   }
   
   body {
@@ -45,6 +45,18 @@
   * {
     box-shadow: none !important;
     text-shadow: none !important;
+  }
+  
+  /* Prevent page breaks inside elements */
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+  
+  /* Keep sections together */
+  section, div {
+    page-break-inside: avoid;
+    break-inside: avoid;
   }
 }
 

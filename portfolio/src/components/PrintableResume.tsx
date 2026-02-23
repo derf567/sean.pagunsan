@@ -22,9 +22,9 @@ const PrintableResume = () => {
 
       {/* Preview Modal */}
       {showPreview && (
-        <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 print:hidden">
-          <div className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-auto">
-            <div className="sticky top-0 bg-white border-b p-4 flex justify-between items-center">
+        <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 print:hidden overflow-auto">
+          <div className="bg-white rounded-lg max-w-4xl w-full">
+            <div className="sticky top-0 bg-white border-b p-4 flex justify-between items-center rounded-t-lg">
               <h3 className="text-xl font-bold">Print Preview</h3>
               <div className="flex gap-2">
                 <button
@@ -44,7 +44,7 @@ const PrintableResume = () => {
                 </button>
               </div>
             </div>
-            <div className="p-8">
+            <div className="p-8 max-h-[80vh] overflow-auto">
               <ResumeContent />
             </div>
           </div>
@@ -61,12 +61,12 @@ const PrintableResume = () => {
 
 const ResumeContent = () => {
   return (
-    <div className="max-w-[210mm] mx-auto bg-white text-black print:text-[11pt]">
+    <div className="max-w-[210mm] mx-auto bg-white text-black p-8 print:p-0">
       {/* Header */}
-      <div className="text-center border-b-4 border-indigo-600 pb-4 mb-4">
-        <h1 className="text-3xl font-bold mb-1">SEAN REGGIE E. PAGUNSAN</h1>
-        <p className="text-lg font-semibold text-indigo-600 mb-2">Estimator & Purchaser</p>
-        <div className="flex justify-center gap-4 text-sm flex-wrap">
+      <div className="text-center border-b-4 border-indigo-600 pb-3 mb-3">
+        <h1 className="text-2xl font-bold mb-1">SEAN REGGIE E. PAGUNSAN</h1>
+        <p className="text-base font-semibold text-indigo-600 mb-2">Estimator & Purchaser</p>
+        <div className="flex justify-center gap-3 text-xs flex-wrap">
           <span>📧 seanreggiep@gmail.com</span>
           <span>📱 09912294552</span>
           <span>📍 Brgy. 19-B, Fatima Village, Bajada, Davao City</span>
@@ -74,9 +74,9 @@ const ResumeContent = () => {
       </div>
 
       {/* Objective */}
-      <div className="mb-4">
-        <h2 className="text-lg font-bold border-b-2 border-gray-300 mb-2">OBJECTIVE</h2>
-        <p className="text-sm text-justify">
+      <div className="mb-3">
+        <h2 className="text-sm font-bold border-b-2 border-gray-300 mb-1.5 uppercase">Objective</h2>
+        <p className="text-xs text-justify leading-tight">
           Obtain a responsibility and challenging position within your company that allow me to learn new technologies 
           and skills while utilizing my previous experiences to improve beyond my abilities currently, and also to build 
           a strong relationship with the company and the clients/customer, and exceed expectation to excel within the company.
@@ -84,106 +84,106 @@ const ResumeContent = () => {
       </div>
 
       {/* Work Experience */}
-      <div className="mb-4">
-        <h2 className="text-lg font-bold border-b-2 border-gray-300 mb-2">WORK EXPERIENCE</h2>
+      <div className="mb-3">
+        <h2 className="text-sm font-bold border-b-2 border-gray-300 mb-1.5 uppercase">Work Experience</h2>
         
-        <div className="mb-3">
+        <div className="mb-2">
           <div className="flex justify-between items-start">
             <div>
-              <h3 className="font-bold text-sm">Estimator</h3>
-              <p className="text-sm italic">KAEL Construction and Supply</p>
+              <h3 className="font-bold text-xs">Estimator</h3>
+              <p className="text-xs italic">KAEL Construction and Supply</p>
+              <p className="text-[10px]">Government Projects: DPWH, NIA, LGU</p>
             </div>
-            <span className="text-sm font-semibold">2022 - 2025</span>
+            <span className="text-xs font-semibold">2022 - 2025</span>
           </div>
-          <p className="text-xs mt-1">Government Projects: DPWH, NIA, LGU</p>
         </div>
 
-        <div className="mb-3">
+        <div className="mb-2">
           <div className="flex justify-between items-start">
             <div>
-              <h3 className="font-bold text-sm">Estimator</h3>
-              <p className="text-sm italic">ANDROMEDA Construction Services and Supply</p>
+              <h3 className="font-bold text-xs">Estimator</h3>
+              <p className="text-xs italic">ANDROMEDA Construction Services and Supply</p>
+              <p className="text-[10px]">Government Projects: DPWH, NIA, LGU</p>
             </div>
-            <span className="text-sm font-semibold">2022 - 2025</span>
+            <span className="text-xs font-semibold">2022 - 2025</span>
           </div>
-          <p className="text-xs mt-1">Government Projects: DPWH, NIA, LGU</p>
         </div>
 
-        <div className="mb-3">
+        <div className="mb-2">
           <div className="flex justify-between items-start">
             <div>
-              <h3 className="font-bold text-sm">Estimator</h3>
-              <p className="text-sm italic">10-02 Ent. Incorporated</p>
+              <h3 className="font-bold text-xs">Estimator</h3>
+              <p className="text-xs italic">10-02 Ent. Incorporated</p>
+              <p className="text-[10px]">Government Projects: DPWH, NIA, LGU</p>
             </div>
-            <span className="text-sm font-semibold">2022 - 2025</span>
+            <span className="text-xs font-semibold">2022 - 2025</span>
           </div>
-          <p className="text-xs mt-1">Government Projects: DPWH, NIA, LGU</p>
         </div>
 
-        <div className="mb-3">
+        <div className="mb-2">
           <div className="flex justify-between items-start">
             <div>
-              <h3 className="font-bold text-sm">Purchaser/Estimator</h3>
-              <p className="text-sm italic">ROSBILL Construction and Supply</p>
+              <h3 className="font-bold text-xs">Purchaser/Estimator</h3>
+              <p className="text-xs italic">ROSBILL Construction and Supply</p>
+              <p className="text-[10px]">Government Projects: DPWH, NIA, LGU</p>
             </div>
-            <span className="text-sm font-semibold">2018 - 2025</span>
+            <span className="text-xs font-semibold">2018 - 2025</span>
           </div>
-          <p className="text-xs mt-1">Government Projects: DPWH, NIA, LGU</p>
         </div>
 
-        <div className="mb-3">
+        <div className="mb-2">
           <div className="flex justify-between items-start">
             <div>
-              <h3 className="font-bold text-sm">Picker/Checker/Encoder</h3>
-              <p className="text-sm italic">Fast Cargo</p>
+              <h3 className="font-bold text-xs">Picker/Checker/Encoder</h3>
+              <p className="text-xs italic">Fast Cargo</p>
             </div>
-            <span className="text-sm font-semibold">2020</span>
+            <span className="text-xs font-semibold">2020</span>
           </div>
         </div>
       </div>
 
       {/* Education */}
-      <div className="mb-4">
-        <h2 className="text-lg font-bold border-b-2 border-gray-300 mb-2">EDUCATION</h2>
+      <div className="mb-3">
+        <h2 className="text-sm font-bold border-b-2 border-gray-300 mb-1.5 uppercase">Education</h2>
         
-        <div className="mb-2">
+        <div className="mb-1.5">
           <div className="flex justify-between">
             <div>
-              <h3 className="font-bold text-sm">College Education</h3>
-              <p className="text-sm">System Technology Institute (STI Davao)</p>
+              <h3 className="font-bold text-xs">College Education</h3>
+              <p className="text-xs">System Technology Institute (STI Davao)</p>
             </div>
-            <span className="text-sm">College Level</span>
+            <span className="text-xs">College Level</span>
           </div>
         </div>
 
-        <div className="mb-2">
+        <div className="mb-1.5">
           <div className="flex justify-between">
             <div>
-              <h3 className="font-bold text-sm">High School Diploma</h3>
-              <p className="text-sm">Daniel R. Aguinaldo, Matina Aplaya, Davao City</p>
+              <h3 className="font-bold text-xs">High School Diploma</h3>
+              <p className="text-xs">Daniel R. Aguinaldo, Matina Aplaya, Davao City</p>
             </div>
-            <span className="text-sm">Graduate</span>
+            <span className="text-xs">Graduate</span>
           </div>
         </div>
 
-        <div className="mb-2">
+        <div className="mb-1.5">
           <div className="flex justify-between">
             <div>
-              <h3 className="font-bold text-sm">Elementary Education</h3>
-              <p className="text-sm">Don Francisco S. Dizon, Elrio, Davao City</p>
+              <h3 className="font-bold text-xs">Elementary Education</h3>
+              <p className="text-xs">Don Francisco S. Dizon, Elrio, Davao City</p>
             </div>
-            <span className="text-sm">Graduate</span>
+            <span className="text-xs">Graduate</span>
           </div>
         </div>
       </div>
 
       {/* Skills */}
-      <div className="mb-4">
-        <h2 className="text-lg font-bold border-b-2 border-gray-300 mb-2">SKILLS</h2>
+      <div className="mb-3">
+        <h2 className="text-sm font-bold border-b-2 border-gray-300 mb-1.5 uppercase">Skills</h2>
         <div className="grid grid-cols-2 gap-x-4 gap-y-1">
           <div>
-            <h3 className="font-semibold text-sm mb-1">Technical Skills:</h3>
-            <ul className="text-xs list-disc list-inside">
+            <h3 className="font-semibold text-xs mb-0.5">Technical Skills:</h3>
+            <ul className="text-[10px] list-disc list-inside leading-tight">
               <li>Microsoft Office Suite</li>
               <li>Cost Estimation Software</li>
               <li>Data Encoding</li>
@@ -191,8 +191,8 @@ const ResumeContent = () => {
             </ul>
           </div>
           <div>
-            <h3 className="font-semibold text-sm mb-1">Professional Expertise:</h3>
-            <ul className="text-xs list-disc list-inside">
+            <h3 className="font-semibold text-xs mb-0.5">Professional Expertise:</h3>
+            <ul className="text-[10px] list-disc list-inside leading-tight">
               <li>Government Project Estimation</li>
               <li>Material Procurement</li>
               <li>Vendor Coordination</li>
@@ -203,19 +203,19 @@ const ResumeContent = () => {
       </div>
 
       {/* Languages */}
-      <div className="mb-4">
-        <h2 className="text-lg font-bold border-b-2 border-gray-300 mb-2">LANGUAGES</h2>
-        <p className="text-sm">English (Fluent), Filipino (Native)</p>
+      <div className="mb-3">
+        <h2 className="text-sm font-bold border-b-2 border-gray-300 mb-1.5 uppercase">Languages</h2>
+        <p className="text-xs">English (Fluent), Filipino (Native)</p>
       </div>
 
       {/* Footer */}
-      <div className="mt-6 pt-4 border-t border-gray-300 text-center">
-        <p className="text-xs italic">
+      <div className="mt-4 pt-3 border-t border-gray-300 text-center">
+        <p className="text-[10px] italic mb-2">
           I hereby certify that the above information is true and correct.
         </p>
-        <div className="mt-4">
-          <p className="font-bold text-sm">Sean Reggie E. Pagunsan</p>
-          <p className="text-xs">Applicant</p>
+        <div className="mt-3">
+          <p className="font-bold text-xs">Sean Reggie E. Pagunsan</p>
+          <p className="text-[10px]">Applicant</p>
         </div>
       </div>
     </div>
